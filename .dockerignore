@@ -1,9 +1,7 @@
 # Dependencies & build artifacts
-# NOTE: do NOT ignore dist/ — the Dockerfile copies the compiled output (COPY dist/ ./dist/)
 node_modules
 coverage
 site
-src
 
 # Logs & debug
 *.log
@@ -20,7 +18,6 @@ CONTRIBUTING.md
 CHANGELOG.md
 LICENSE
 SECURITY.md
-*.md
 docs/
 site/
 mkdocs.yml
@@ -28,33 +25,22 @@ assets/
 scripts/docsbuild.sh
 
 # Config & IDE
-tsconfig.json
-tsconfig.*.json
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Environment & secrets (CRITICAL — never ship real credentials in image)
+# Environment & secrets
 .env
 .env.*
 .envrc
-.envrc.*
 *.env
 .env.local
 .env.*.local
-.env.docker
-.env.prod
-.env.staging
-.env.secrets
 docker-compose.override.yml
-docker-compose.*.override.yml
 secrets/
 **/*-key.json
 **/service-account*.json
-**/.aws/
-**/.config/gcloud/
-**/.azure/
 .npmrc
 .yarnrc*
 .netrc
@@ -72,14 +58,13 @@ temp/
 scripts/
 test-*.js
 test-*.sh
-*.sh
 
-# TypeScript & build info
+# TypeScript build info only
 *.tsbuildinfo
-*.ts
 
 # Serena / Claude local data
 .serena/
 .claude/
 .cursor/
 .antigravitycli/
+
