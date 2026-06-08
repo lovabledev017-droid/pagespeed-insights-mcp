@@ -1,0 +1,12 @@
+name = "pagespeed-insights-mcp"
+main = "worker/src/index.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Set GOOGLE_API_KEY via: wrangler secret put GOOGLE_API_KEY
+# Or in Cloudflare dashboard: Workers & Pages > your worker > Settings > Variables
+
+[[routes]]
+pattern = "/*"
+zone_name = ""
